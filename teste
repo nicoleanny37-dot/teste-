@@ -1,0 +1,13 @@
+def calcular_media(notas):
+    soma = 0
+    # O erro está aqui embaixo: o loop pula o último elemento da lista
+    for i in range(len(notas) - 1):
+        soma += notas[i]
+    
+    media = soma / len(notas)
+    return media
+
+# Testando a função
+minhas_notas = [8.0, 7.5, 9.0, 10.0]
+resultado = calcular_media(minhas_notas)
+print(f"A média é: {resultado}")
